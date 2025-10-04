@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Salud humana y fisiología en microgravedad",
+    "papers": [
+      {
+        "id": "paper-001",
+        "title": "Efectos de la microgravedad en la expresión génica de células musculares",
+        "authors": ["Ana Martínez", "John Doe"],
+        "year": 2023,
+        "summary": "Este estudio analiza cómo la microgravedad prolongada altera la expresión génica.",
+        "keywords": ["microgravedad", "expresión génica"],
+        "link": "https://example.com/paper-001"
+      },
+      {
+        "id": "paper-002",
+        "title": "Cambios en el sistema inmunológico durante vuelos espaciales de larga duración",
+        "authors": ["Carlos Pérez", "Emily Johnson"],
+        "year": 2022,
+        "summary": "Disfunción inmunológica en astronautas.",
+        "keywords": ["sistema inmune", "astronautas"],
+        "link": "https://example.com/paper-002"
+      }
+    ]
+  },
+  {
+    "name": "Radiación espacial y adaptación celular",
+    "papers": [
+      {
+        "id": "paper-003",
+        "title": "Efectos de la radiación cósmica en la integridad del ADN",
+        "authors": ["Laura Gómez", "Michael Smith"],
+        "year": 2021,
+        "summary": "Analiza el daño en el ADN causado por la radiación cósmica.",
+        "keywords": ["radiación cósmica", "ADN"],
+        "link": "https://example.com/paper-003"
+      }
+    ]
+  }
+]

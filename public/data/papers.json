@@ -1,0 +1,82 @@
+[
+  {
+    "id": "paper-001",
+    "title": "Efectos de la microgravedad en la expresión génica de células musculares",
+    "authors": ["Ana Martínez", "John Doe"],
+    "year": 2023,
+    "summary": "Este estudio analiza cómo la microgravedad prolongada altera la expresión génica de células musculares humanas, identificando rutas moleculares asociadas a la atrofia.",
+    "category": "Salud humana y fisiología en microgravedad",
+    "keywords": ["microgravedad", "expresión génica", "músculos", "atrofia"],
+    "link": "https://example.com/paper-001"
+  },
+  {
+    "id": "paper-002",
+    "title": "Cambios en el sistema inmunológico durante vuelos espaciales de larga duración",
+    "authors": ["Carlos Pérez", "Emily Johnson"],
+    "year": 2022,
+    "summary": "Investigación sobre la disfunción inmunológica en astronautas y posibles estrategias para mitigar infecciones durante misiones prolongadas.",
+    "category": "Salud humana y fisiología en microgravedad",
+    "keywords": ["sistema inmune", "astronautas", "misiones largas", "infecciones"],
+    "link": "https://example.com/paper-002"
+  },
+  {
+    "id": "paper-003",
+    "title": "Efectos de la radiación cósmica en la integridad del ADN",
+    "authors": ["Laura Gómez", "Michael Smith"],
+    "year": 2021,
+    "summary": "Analiza el daño en el ADN causado por la radiación cósmica y evalúa sistemas de reparación celular en condiciones de espacio profundo.",
+    "category": "Radiación espacial y adaptación celular",
+    "keywords": ["radiación cósmica", "ADN", "daño celular", "reparación genética"],
+    "link": "https://example.com/paper-003"
+  },
+  {
+    "id": "paper-004",
+    "title": "Respuesta cardiovascular en ambientes de microgravedad",
+    "authors": ["Pedro Ramos", "Sarah Brown"],
+    "year": 2020,
+    "summary": "Estudio de la redistribución de fluidos y cambios en la función cardíaca durante misiones espaciales de larga duración.",
+    "category": "Salud humana y fisiología en microgravedad",
+    "keywords": ["cardiovascular", "flujo sanguíneo", "misiones espaciales", "gravedad cero"],
+    "link": "https://example.com/paper-004"
+  },
+  {
+    "id": "paper-005",
+    "title": "Uso de organoides para estudiar efectos del espacio en tejidos humanos",
+    "authors": ["Julia Navarro", "David Lee"],
+    "year": 2023,
+    "summary": "Explora cómo los organoides pueden simular el impacto de la microgravedad y radiación espacial en diferentes tipos de tejidos humanos.",
+    "category": "Modelos de laboratorio y bioingeniería",
+    "keywords": ["organoides", "tejidos humanos", "biología espacial", "bioingeniería"],
+    "link": "https://example.com/paper-005"
+  },
+  {
+    "id": "paper-006",
+    "title": "Microbioma humano y su evolución en misiones espaciales prolongadas",
+    "authors": ["Hugo Díaz", "Rachel Green"],
+    "year": 2022,
+    "summary": "Analiza cómo la microbiota intestinal cambia durante la exposición prolongada a ambientes espaciales y su impacto en la salud.",
+    "category": "Microbiología y ecosistemas espaciales",
+    "keywords": ["microbioma", "microbiota intestinal", "misiones prolongadas", "salud humana"],
+    "link": "https://example.com/paper-006"
+  },
+  {
+    "id": "paper-007",
+    "title": "Crecimiento de plantas bajo microgravedad simulada",
+    "authors": ["María López", "Paul Walker"],
+    "year": 2021,
+    "summary": "Estudia el desarrollo de plantas y su adaptación a la falta de gravedad para futuras misiones de agricultura espacial.",
+    "category": "Biología vegetal en el espacio",
+    "keywords": ["plantas", "agricultura espacial", "microgravedad", "botánica"],
+    "link": "https://example.com/paper-007"
+  },
+  {
+    "id": "paper-010",
+    "title": "Análisis de datos ómicos para la biología espacial",
+    "authors": ["Luis Castro", "Emily White"],
+    "year": 2023,
+    "summary": "Uso de datos de transcriptómica y proteómica para entender la respuesta de organismos vivos en ambientes espaciales.",
+    "category": "Bioinformática y análisis de datos espaciales",
+    "keywords": ["bioinformática", "datos ómicos", "proteómica", "transcriptómica"],
+    "link": "https://example.com/paper-010"
+  }
+]
