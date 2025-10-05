@@ -1,11 +1,11 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
-import axios from "axios";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import PaperList from "../components/PaperList";
 import { unslugify } from "../utils/slug";
 import { normalizeText } from "../utils/normalize";
+import { fetchCategories } from "../services/dataService";
 
 // 🎨 Paleta 
 const palette = [
@@ -25,26 +25,40 @@ export default function CategoryPage() {
   const [papers, setPapers] = useState([]);
   const [keywords, setKeywords] = useState([]);
   const [color, setColor] = useState(palette[0]); // Color por defecto
+  const [description, setDescription] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const load = async () => {
+      setIsLoading(true);
+      setError(null);
       try {
-        const res = await axios.get("/data/categories.json");
-        // Buscar categoría en el JSON para asignar su color
-        const cats = res.data;
+        const cats = await fetchCategories();
         const foundIndex = cats.findIndex(
           (c) => normalizeText(c.name) === normalizeText(categoryName)
         );
         if (foundIndex !== -1) {
           setColor(palette[foundIndex % palette.length]);
           setPapers(cats[foundIndex].papers);
+          setDescription(cats[foundIndex].description || "");
           const uniq = [
             ...new Set((cats[foundIndex].papers || []).flatMap((p) => p.keywords || [])),
           ];
           setKeywords(uniq.slice(0, 20));
+        } else {
+          setColor(palette[0]);
+          setPapers([]);
+          setDescription("");
+          setKeywords([]);
+          setError("No encontramos información para esta categoría.");
         }
       } catch (err) {
         console.error("Error cargando categorías", err);
+        setError("No pudimos cargar la información. Intenta nuevamente más tarde.");
+        setDescription("");
+      } finally {
+        setIsLoading(false);
       }
     };
     load();
@@ -52,6 +66,12 @@ export default function CategoryPage() {
 
   return (
     <section className="relative w-full max-w-7xl mx-auto px-6 pt-20 pb-16">
+      {isLoading && (
+        <p className="text-white mb-10 animate-pulse">Cargando categoría...</p>
+      )}
+      {error && !isLoading && (
+        <p className="text-red-200 mb-10">{error}</p>
+      )}
       {/* Botón volver */}
       <button
         onClick={() => navigate(-1)}
@@ -94,8 +114,14 @@ export default function CategoryPage() {
             {categoryName}
           </h1>
 
+          {description && (
+            <p className="mt-3 text-base text-indigo-100 text-center md:text-left max-w-md">
+              {description}
+            </p>
+          )}
+
           {keywords.length > 0 && (
-            <div className="mt-6 w-full bg-white/10 backdrop-blur-sm rounded-2xl p-4">
+            <div className="mt-7 w-full bg-white/10 backdrop-blur-sm rounded-2xl p-4">
               <h3 className="text-white font-semibold mb-2">🔑 Keywords</h3>
               <div className="flex flex-wrap gap-2">
                 {keywords.map((k) => (
@@ -114,7 +140,10 @@ export default function CategoryPage() {
         {/* Lado derecho */}
         <div className="md:col-span-2">
           <h2 className="text-xl font-semibold text-white mb-3">Artículos relacionados</h2>
-          <PaperList papers={papers} />
+          {!isLoading && !error && <PaperList papers={papers} />}
+          {!isLoading && !error && !papers.length && (
+            <p className="text-indigo-100">Aún no hay artículos registrados para esta categoría.</p>
+          )}
         </div>
       </div>
     </section>
