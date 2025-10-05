@@ -15,8 +15,8 @@ export default function Header() {
 
   return (
     <header className="w-full py-4 px-6 flex items-center justify-between absolute top-0 left-0 z-20 bg-transparent">
-      {/* Logo */}
-      <h1 className="text-2xl font-bold text-[#033096]">
+      {/* Logo / 033096 */}
+      <h1 className="text-2xl font-bold text-[#FFFFF]">
         HerCode Space Bio
       </h1>
 
@@ -25,7 +25,7 @@ export default function Header() {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            `text-[#033096] hover:underline transition ${
+            `text-[#FFFFF] hover:underline transition ${
               isActive ? "underline" : ""
             }`
           }
@@ -36,7 +36,7 @@ export default function Header() {
         <NavLink
           to="/explorar"
           className={({ isActive }) =>
-            `text-[#033096] hover:underline transition ${
+            `text-[#FFFFF] hover:underline transition ${
               isActive ? "underline" : ""
             }`
           }
@@ -47,7 +47,7 @@ export default function Header() {
           to="/explorar#areas"
           onClick={handleAreasClick}
           className={({ isActive }) =>
-            `text-[#033096] hover:underline transition ${
+            `text-[#FFFFF] hover:underline transition ${
               isActive ? "underline" : ""
             }`
           }
