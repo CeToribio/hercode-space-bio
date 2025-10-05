@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import FloatingSun from "./components/FloatingSun";
 import Starfield from "./components/Starfield";
 
 export default function App() {
